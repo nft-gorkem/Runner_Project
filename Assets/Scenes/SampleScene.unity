@@ -5654,7 +5654,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.802082
@@ -5712,13 +5712,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.41900265, y: 0.11829687, z: -0.05516273, w: 0.8985542}
   m_LocalPosition: {x: 0, y: 3, z: 2}
   m_LocalScale: {x: 1.327, y: 1.327, z: 1.327}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: 15, z: 0}
 --- !u!1001 &710669961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8962,7 +8962,7 @@ GameObject:
   - component: {fileID: 953239109}
   - component: {fileID: 953239108}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: FinishLine
   m_TagString: LevelFinish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18417,7 +18417,6 @@ GameObject:
   - component: {fileID: 1848936995}
   - component: {fileID: 1848936994}
   - component: {fileID: 1848936993}
-  - component: {fileID: 1848936997}
   - component: {fileID: 1848936999}
   - component: {fileID: 1848937000}
   m_Layer: 0
@@ -18544,19 +18543,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1848936991}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1848936997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1848936991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c417523ea9f12454693069d226020c97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
 --- !u!95 &1848936999
 Animator:
   serializedVersion: 5
@@ -18581,7 +18567,7 @@ Animator:
     'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:LeftHandThumb3'\n\tTransform
     'mixamorig:RightArm'\n\tand more ...\n\tFrom animation clip 'Idle'\n\tFrom animation
     clip 'Standard Run'\n\tFrom animation clip 'Left Strafe'\n\tFrom animation clip
-    'Right Strafe'"
+    'Right Strafe'\n\tFrom animation clip 'Sweep Fall'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -18598,8 +18584,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 382f2f7379df349dcb16f19b036eed4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tapToStart: 0
   warrior: {fileID: 1848936991}
   bryce: {fileID: 536002765}
+  death: 0
+  health: 100
 --- !u!1 &1852719549
 GameObject:
   m_ObjectHideFlags: 0
